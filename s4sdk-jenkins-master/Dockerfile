@@ -34,6 +34,8 @@ USER jenkins
 #For 2.x-derived images, to indicate that this Jenkins installation is fully configured.
 RUN echo 2.0 > /usr/share/jenkins/ref/jenkins.install.UpgradeWizard.state
 
+RUN echo abc > /usr/share/jenkins/ref/somefile.txt
+
 VOLUME /var/jenkins_ssl
 ENV JAVA_OPTS $JAVA_OPTS -Djenkins.install.runSetupWizard=false -Dhudson.model.DirectoryBrowserSupport.CSP=
 
